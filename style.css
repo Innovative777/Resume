@@ -1,60 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Your Name</h1>
-    <p>Brief Introduction</p>
-  </header>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+header, footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Your about me content.</p>
-  </section>
+nav ul {
+  display: flex;
+  justify-content: center;
+  background-color: #444;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-  <section id="resume">
-    <h2>Resume</h2>
-    <a href="assets/your-resume.pdf" target="_blank">Download My Resume</a>
-  </section>
+nav ul li {
+  margin: 0;
+}
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Skill 1</li>
-      <li>Skill 2</li>
-      <li>Skill 3</li>
-    </ul>
-  </section>
+nav ul li a {
+  display: block;
+  padding: 1em;
+  color: white;
+  text-decoration: none;
+}
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Details about your projects.</p>
-  </section>
+section {
+  padding: 2em;
+}
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile">Your LinkedIn</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername">Your GitHub</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Your Name</p>
-  </footer>
-</body>
-</html>
+section h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5em;
+}

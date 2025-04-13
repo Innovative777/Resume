@@ -1,113 +1,169 @@
-/* Fonts & Base Reset */
-body {
+/* Global Reset */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #8360c3, #2ebf91);
-  background-attachment: fixed;
-  color: #1a1a1a;
-  line-height: 1.7;
+  box-sizing: border-box;
 }
 
-.container {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #050c2a, #371b75);
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
   text-align: center;
-  padding: 3rem 1rem;
+  background: linear-gradient(to right, #050c2a, #2a105d);
 }
 
-/* Header Styling */
-header {
-  background: linear-gradient(to right, #7F00FF, #E100FF);
-  color: white;
-  padding: 4rem 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+.intro-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  animation: fadeIn 1.5s ease-out;
 }
 
-.glow {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 3rem;
-  text-shadow: 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #0ff;
-  animation: fadeIn 2s ease-out;
+.intro-card h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-header p {
-  font-style: italic;
+.intro-card p {
   font-size: 1.2rem;
+  color: #cfcfcf;
 }
 
-/* Section Styling */
+/* Sections */
 section {
-  padding: 3rem 1.5rem;
-  margin: 2rem auto;
-  max-width: 900px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
+  padding: 60px 15%;
+  background-color: transparent;
 }
 
 h2 {
   font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffe600;
   font-weight: bold;
-  color: #7F00FF;
-  text-transform: uppercase;
-  border-bottom: 2px dashed #bbb;
-  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 6px #000;
 }
 
-a {
-  color: #E100FF;
-  text-decoration: none;
+.about p {
+  color: #f0f0f0;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-left: 4px solid #ffe600;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  background: #ffe600;
+  color: #000;
+}
+
+.skill-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-style: italic;
   font-weight: bold;
 }
 
-ul {
+.skill-card p {
+  font-size: 0.95rem;
+}
+
+/* Projects */
+.projects ul {
   list-style: none;
   padding-left: 0;
 }
 
-ul li {
-  font-style: italic;
-  font-weight: bold;
+.projects li {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 12px;
+  margin: 10px 0;
+  border-left: 4px solid #2ad6ff;
+  border-radius: 8px;
+}
+
+/* Contact */
+.contact p {
   font-size: 1.1rem;
-  background: #fffbe6;
-  color: #333;
-  margin: 0.7rem 0;
-  padding: 0.7rem 1.2rem;
-  border-left: 6px solid #7F00FF;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 10px;
+  display: inline-block;
+  border-radius: 8px;
+  margin: 5px 0;
 }
 
-ul li:hover {
-  background-color: #ffecb3;
-  transform: scale(1.04);
-}
-
-/* Contact + Footer */
 .contact a {
-  color: #6a1b9a;
-  font-weight: bold;
+  color: #ffe600;
+  text-decoration: none;
 }
 
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  background: #222;
-  color: #fff;
-  padding: 1rem;
+  padding: 20px;
+  background: #050c2a;
   font-size: 0.9rem;
-  margin-top: 3rem;
+  color: #999;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  h1 { font-size: 2.2rem; }
-  h2 { font-size: 1.5rem; }
-  ul li { font-size: 1rem; }
-  section { padding: 2rem 1rem; }
+  section {
+    padding: 40px 10%;
+  }
+
+  .intro-card h1 {
+    font-size: 2rem;
+  }
+
+  .intro-card p {
+    font-size: 1rem;
+  }
 }
